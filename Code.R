@@ -39,7 +39,24 @@ ggplot(hr_data, aes(x=Age, fill=Attrition)) + geom_histogram(bins=20, position="
 ggplot(hr_data, aes(x=Attrition, y=MonthlyIncome, fill=Attrition)) + geom_boxplot()
 
 
+# Data Preparation for Regression 
 
+#New columns
+hr_data$Career_Progress <- round((hr_data$YearsInCurrentRole/hr_data$YearsAtCompany), digits=2)
+#--- Refactor for NaN and inf
 
+#-- ToDo -> tenure group
+
+#Categorical -> factor
+hr_data$Attrition <- as.factor(hr_data$Attrition)
+hr_data$OverTime  <- as.factor(hr_data$OverTime)
+hr_data$BusinessTravel <- as.factor(hr_data$BusinessTravel)
+hr_data$Gender <- as.factor(hr_data$Gender)
+hr_data$Department <- as.factor(hr_data$Department)
+hr_data$MaritalStatus <- as.factor(hr_data$MaritalStatus)
+
+#Remove unnecessary columns 
+hr_data$EmployeeCount <- NULL
+hr_data$EmployeeNumber <- NULL
 
 
