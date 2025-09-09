@@ -1,13 +1,15 @@
 # Plots 
 
-#Gender/Attrition
+# Exploratory Plots ####
+
+## Gender/Attrition ====
 ggplot(hr_data, aes(x=Attrition, fill=Gender)) + geom_bar()
 
-#Overtime/Attrition
+## Overtime/Attrition ====
 ggplot(hr_data, aes(x=Attrition, fill=OverTime)) + geom_bar()
 
-#Age/Attrition
+## Age/Attrition ====
 ggplot(hr_data, aes(x=Age, fill=Attrition)) + geom_histogram(bins=20, position="dodge")
 
-#Salary/Attrition
+## Salary/Attrition ====
 ggplot(hr_data, aes(x=Attrition, y=MonthlyIncome, fill=Attrition)) + geom_boxplot()

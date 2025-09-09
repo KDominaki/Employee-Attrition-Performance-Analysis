@@ -3,7 +3,7 @@
 hr_data <- read.csv("Employee-Attriction-Dataset.csv")
 
 
-# Basic data exploration
+# Basic data exploration ####
 
 dim(hr_data)
 str(hr_data)
