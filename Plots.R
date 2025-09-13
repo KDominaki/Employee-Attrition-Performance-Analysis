@@ -1,6 +1,6 @@
 # Plots 
 
-# Exploratory Plots ####
+# Exploratory Plots ----
 
 ## Gender/Attrition ====
 ggplot(hr_data, aes(x=Attrition, fill=Gender)) + geom_bar()
